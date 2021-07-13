@@ -1,0 +1,7 @@
+<?php
+require("../../models/User.php");
+$user = new User();
+$id = $_GET['id'];
+echo json_encode([
+    'data' => $user->getEdit($id)
+]);
